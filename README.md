@@ -6,10 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Install Nodejs: https://nodejs.org/en/ (6.11.5 LTS)
 2. Install Angular CLI : `npm install -g @angular/cli`
-3. Install `node_modules`:
+3. Clone project to your local:
+    - Install Git: https://git-scm.com/downloads.
+    - git clone `url`.
+4. Install `node_modules`:
     - Open command line: `Ctrl + ~`(if you work on Visual Studio Code).
     - Enter: `npm install`.
-4. Build project: `ng serve`.
+5. Build project: `ng serve`.
 
 ## Development server
 

@@ -1,0 +1,45 @@
+header{
+    background-color: #4257b2;
+    min-width: auto;
+    height: 5rem;
+}
+
+.headercontainer{
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 81.25em;
+    padding: 0;
+    height: 5rem;
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.headerlogo{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 5%;
+}
+
+a.headerlogo{
+    display: inline-block;
+    height: 5rem;
+    margin-left: -2rem;
+    padding-left: 2rem;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    line-height: 5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+// .login{
+//     float: right;
+//     padding: 10px 10px;
+//     vertical-align: center;
+//     color: white;
+// }

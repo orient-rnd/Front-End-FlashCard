@@ -1,2 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: hurme_no2-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size: 100%;
+    line-height: 1.625;
+    background: #f0f0f0;
+}
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";

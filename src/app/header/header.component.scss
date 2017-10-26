@@ -20,7 +20,7 @@ header{
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 a.headerlogo{
@@ -37,9 +37,36 @@ a.headerlogo{
     font-family: monospace;
 }
 
-// .login{
-//     float: right;
-//     padding: 10px 10px;
-//     vertical-align: center;
-//     color: white;
-// }
+.login{
+   vertical-align: center;
+   color: white;
+   line-height: 5rem;
+   padding: 0 3rem;
+   float: right;
+}
+
+.login:hover{
+    color: #c9ceeb;
+}
+
+.signup{
+    background: #3ccfcf;
+    vertical-align: center;
+    color: white;
+    line-height: 5rem;
+    padding: 0 3rem;
+    float: right;
+}
+
+.signup:hover{
+    background: #ffcd1f;
+    color: #455358;
+}
+
+.rightcontainer{
+    float: right;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin-right: 10%;
+}

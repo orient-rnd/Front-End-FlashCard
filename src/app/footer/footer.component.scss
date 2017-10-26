@@ -1,0 +1,20 @@
+footer{
+    background-color: #4257BD;
+    min-width: auto;
+    height: 5rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer span{
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 10%;
+    line-height: 5rem;
+    font-size: 1rem;
+}

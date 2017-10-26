@@ -8,6 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+
+import { FlashcardService } from './flashcard.service';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +23,15 @@ import { MatMenuModule, MatButtonModule } from '@angular/material';
     FlashcardComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FlashcardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

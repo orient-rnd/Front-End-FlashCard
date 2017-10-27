@@ -7,8 +7,8 @@ import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.comp
 const routes: Routes = [
   { path: '', redirectTo: '/category', pathMatch: 'full' },
   { path: 'category', component: CategoryComponent },
-  { path: 'flashcard', component: FlashcardComponent },
-  { path: 'createflashcard', component: CreatefalshcardComponent }
+  { path: 'flashcard/:id', component: FlashcardComponent },
+  { path: 'createflashcard/:id', component: CreatefalshcardComponent }
 ];
 
 @NgModule({

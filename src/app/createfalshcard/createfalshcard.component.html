@@ -1,6 +1,29 @@
-<h1 mat-dialog-title>Create Flashcard</h1>
-<div mat-dialog-content>
-  <input [(ngModel)]="name" width="400px"/><br>
-  <input width="400px"/>
-  <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+<div>
+  <h1 mat-dialog-title>Create Flashcard</h1>
+  <div mat-dialog-content>
+
+
+    <div class="faceA">
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.faceA" width="400px" placeholder="Enter the English" />
+      </mat-form-field>
+      <span>Keyword</span>
+    </div>
+
+
+    <div class="faceB">
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.faceB" width="400px" placeholder="Enter definition" />
+      </mat-form-field>
+
+
+      <span>Definition</span>
+    </div>
+
+
+  </div>
+  <div class="button-center">
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+  </div>
+
 </div>

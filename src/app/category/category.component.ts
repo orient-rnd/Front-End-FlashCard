@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FlashcardService } from '../flashcard.service';
+import { Method } from './../method.enum';
 
 @Component({
   selector: 'app-category',
@@ -11,5 +13,4 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

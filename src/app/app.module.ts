@@ -10,6 +10,12 @@ import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
 import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { FlashcardService } from './flashcard.service';
+import { HttpModule } from '@angular/http';
+
+
 
 @NgModule({
   declarations: [
@@ -21,13 +27,17 @@ import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.comp
     CreatefalshcardComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
     MatMenuModule,
     MatButtonModule,
-    FormsModule
+
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FlashcardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlashcardComponent implements OnInit {
 
-  faceA: string;
+  faceA: string = "thu";
+  faceB: string = "anh thu";
 
   constructor() { }
 

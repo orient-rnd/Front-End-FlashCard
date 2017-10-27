@@ -4,7 +4,7 @@ import { FlashcardComponent } from './flashcard/flashcard.component';
 import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/category', pathMatch: 'full' },
+  { path: '', redirectTo: '/flashcard', pathMatch: 'full' },
   { path: 'category', component: CategoryComponent },
   { path: 'flashcard', component: FlashcardComponent },
 ];

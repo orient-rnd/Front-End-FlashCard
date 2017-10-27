@@ -9,6 +9,7 @@ import { Method } from './../method.enum';
 })
 export class CategoryComponent implements OnInit {
 
+  idCategory:string = "c174dcb13ee04fb8966eb640abb8e972";
   constructor() { }
 
   ngOnInit() {

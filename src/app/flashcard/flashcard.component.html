@@ -1,16 +1,11 @@
-
-<div class="thu">
-  {{faceA}}
+<div class="thu3" *ngFor="let fc of flashCards">
+  <div class="thu">
+    {{fc.faceA}}
+  </div>
+  <div class="thu1">
+    {{fc.faceB}}
+  </div>
+  <div class="thu2">
+    x y z
+  </div>
 </div>
-<div class="thu1">
-  {{faceB}}
-</div>
-<div class="thu2">
-  x y z
-</div>
-<p>
-  flashcard works!
-  flashcard works!
-  flashcard works!
-  <button mat-raised-button color="primary" [routerLink]="['/createflashcard',id]">Create</button>
-</p>

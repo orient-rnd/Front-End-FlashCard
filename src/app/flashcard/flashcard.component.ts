@@ -13,7 +13,6 @@ export class FlashcardComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.router.url.split('/')[2];
-    console.log(this.id);
   }
 
 

@@ -32,8 +32,7 @@ export class CreatefalshcardComponent implements OnInit {
 
   onSave() {
     this.data.flashCardCategoryId = this.router.url.split('/')[2];
-    let body = JSON.stringify(this.data);
-    // console.log(body);
+    let body = JSON.stringify(this.data);  
     this.flashCardService.interactDB(Method.POST, this.currenturl, body).subscribe(res => console.log(res));
   }
 

@@ -11,16 +11,19 @@ import { FlashcardComponent } from './flashcard/flashcard.component';
 import { MatMenuModule, MatButtonModule, MatInputModule } from '@angular/material';
 import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CreateCategoryComponent } from './create-category/create-category.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlashcardService } from './flashcard.service';
 import { HttpModule } from '@angular/http';
 
-
+import {MatButtonToggleModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    CreateCategoryComponent,
     FooterComponent,
     CategoryComponent,
     FlashcardComponent,
@@ -29,12 +32,16 @@ import { HttpModule } from '@angular/http';
   imports: [
     FormsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpModule,
     MatMenuModule,
+    MatInputModule,
+    MatSelectModule,
     MatButtonModule,
     MatInputModule,
     FormsModule,
+    MatButtonToggleModule,
     HttpClientModule
   ],
   providers: [FlashcardService],

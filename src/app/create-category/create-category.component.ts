@@ -15,10 +15,7 @@ export class CreateCategoryComponent implements OnInit {
     {value:false, viewValue: 'Face B is choosen.'}
   ];
   constructor(private http: HttpClient) { 
-      // this.http.get('http://osdintern2.azurewebsites.net/FlashCardCategories')
-      // .subscribe((dulieu: any) => {
-      //   this.dulieuarr = dulieu;
-  // })
+      
 }
   toggleForgot() {
     this.forgot = !this.forgot;
@@ -35,7 +32,7 @@ export class CreateCategoryComponent implements OnInit {
       "isFaceAShowFirst": check,
       "isRandom": true
     };
-    // console.log("value",name);
+ 
     this.http.post('http://osdintern2.azurewebsites.net/FlashCardCategories' , body)
     .subscribe(res => { console.log(res) },
     err => {

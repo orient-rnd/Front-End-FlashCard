@@ -1,0 +1,15 @@
+<div layout="row" layout-align="center center" [hidden]="forgot" ng-app="">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput name="category" placeholder="Input Category Name" #categoryName>
+      <br/>
+    </mat-form-field>
+    <mat-select placeholder="Choosing faces" [(ngModel)]="selectedValue" name="face" #faceValue>
+      <mat-option *ngFor="let face of faces" [value]="face.value">
+        {{face.viewValue}}
+      </mat-option>
+    </mat-select>
+    <button (click)="onSubmit(categoryName.value,faceValue.value)" mat-raised-button color="primary">Add Category</button>
+  </form>
+</div>
+<mat-button-toggle (click)="toggleForgot()">Create Category</mat-button-toggle>

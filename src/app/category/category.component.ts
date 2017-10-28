@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FlashcardService } from '../flashcard.service';
+import { Method } from './../method.enum';
 
 @Component({
   selector: 'app-category',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private flashcardService:FlashcardService) { }
+  categories:any;
+  urlAPI:string="http://osdintern2.azurewebsites.net/FlashCardCategories";
 
   ngOnInit() {
+    this.flashcardService.interactDB(Method.GET,this.urlAPI,'').subscribe(res=>{this.categories=res});  
   }
-
 }

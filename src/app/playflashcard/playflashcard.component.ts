@@ -22,7 +22,16 @@ export class FlashCard {
 export class PlayflashcardComponent implements OnInit {
 
   flashcards: FlashCard[];
-  showFlashCard: FlashCard;
+  showFlashCard: FlashCard = {
+    id: 'string',
+    faceA: 'string',
+    faceB: 'string',
+    flashCardCategoryId: 'string',
+    flashCardCategoryName: 'string',
+    userEmail: 'string',
+    displayOrder: 0,
+    viewNumber: 0
+  };
   total;
   autoTicks = false;
   disabled = false;

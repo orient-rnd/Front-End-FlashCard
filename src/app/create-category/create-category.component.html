@@ -20,7 +20,7 @@
       </mat-select>
       <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
     </mat-form-field>
-    <button class="big-button" (click)="onSubmit(categoryName.value,faceValue.value)" mat-raised-button color="primary">Add Category</button>
+    <button class="big-button" (click)="onSubmit(categoryName.value,faceValue.value)"(click)="btnClick()" mat-raised-button color="primary">Add Category</button>
     <button class="big-button" mat-raised-button color="warn" (click)="backClicked()">Cancel</button>
   </form>
 </div>

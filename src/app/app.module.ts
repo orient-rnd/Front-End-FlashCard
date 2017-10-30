@@ -15,7 +15,7 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlashcardService } from './flashcard.service';
 import { HttpModule } from '@angular/http';
-
+import { EditCategoryComponent } from './edit-category/edit-category.component';
 import {MatButtonToggleModule} from '@angular/material';
 import {MatSelectModule} from '@angular/material';
 
@@ -27,6 +27,7 @@ import {MatSelectModule} from '@angular/material';
     FooterComponent,
     CategoryComponent,
     FlashcardComponent,
+    EditCategoryComponent,
     CreatefalshcardComponent
   ],
   imports: [

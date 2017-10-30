@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MatMenuModule, MatButtonModule } from '@angular/material';
     BrowserModule,
     AppRoutingModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,14 +8,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
-import { MatMenuModule, MatButtonModule, MatInputModule,MatCardModule,MatIconModule } from '@angular/material';
+import { MatMenuModule, MatButtonModule, MatInputModule,MatCardModule,MatIconModule,MatGridListModule } from '@angular/material';
 import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlashcardService } from './flashcard.service';
 import { HttpModule } from '@angular/http';
-
+import { EditCategoryComponent } from './edit-category/edit-category.component';
 import {MatButtonToggleModule} from '@angular/material';
 import {MatSelectModule} from '@angular/material';
 
@@ -27,6 +27,7 @@ import {MatSelectModule} from '@angular/material';
     FooterComponent,
     CategoryComponent,
     FlashcardComponent,
+    EditCategoryComponent,
     CreatefalshcardComponent
   ],
   imports: [
@@ -42,6 +43,7 @@ import {MatSelectModule} from '@angular/material';
     MatInputModule,
     MatCardModule,
     MatIconModule,
+    MatGridListModule,
     FormsModule,
     MatButtonToggleModule,
     HttpClientModule

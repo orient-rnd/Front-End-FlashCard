@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FlashcardService } from '../flashcard.service';
 import { Method } from './../method.enum';
+import {MatCardModule} from '@angular/material';
 
 
 @Component({

@@ -1,15 +1,25 @@
-<div layout="row" layout-align="center center" [hidden]="forgot" ng-app="">
+
+<nav>
+  <a routerLink="/">&lt; Go Back to HomePage</a>
+</nav>
+<mat-card class="example-card">
+    <mat-card-header><h2>Create Category</h2></mat-card-header>
+<div layout="colunm" ng-app="">
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <input matInput name="category" placeholder="Input Category Name" #categoryName>
-      <br/>
     </mat-form-field>
-    <mat-select placeholder="Choosing faces" [(ngModel)]="selectedValue" name="face" #faceValue>
-      <mat-option *ngFor="let face of faces" [value]="face.value">
-        {{face.viewValue}}
-      </mat-option>
-    </mat-select>
-    <button (click)="onSubmit(categoryName.value,faceValue.value)" mat-raised-button color="primary">Add Category</button>
+    <label><b>Choosing you Face that you want to show first:</b></label>
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="Choose one of faces" name="face" #faceValue>
+        <mat-option *ngFor="let face of faces" [value]="face.value">
+          {{face.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+    <button type="button" class="big-button" (click)="onSubmit(categoryName.value,faceValue.value)"(click)="btnClick()" mat-raised-button color="primary">Add Category</button>
+    <button class="big-button" mat-raised-button color="warn" (click)="backClicked()">Cancel</button>
   </form>
 </div>
-<mat-button-toggle (click)="toggleForgot()">Create Category</mat-button-toggle>
+</mat-card>

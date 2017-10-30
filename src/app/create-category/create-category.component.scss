@@ -1,9 +1,23 @@
-.example-form {
-    min-width: 150px;
+.example-card {
+    min-width: 200px;
     max-width: 500px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 290px;
+    padding: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
-  
+  .big-button {
+   
+    width: 47%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin:5px;
+    margin-top:30px;
+  }
   .example-full-width {
     width: 100%;
   }

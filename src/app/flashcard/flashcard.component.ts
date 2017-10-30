@@ -4,6 +4,15 @@ import { FlashcardService } from '../flashcard.service';
 import { Method } from './../method.enum';
 import {MatCardModule} from '@angular/material';
 
+export class Category{
+  faceA: string;
+  faceB: string;
+  flashCardCategoryId: string;
+  flashCardCategoryName: string;
+  userEmail: string;
+  displayOrder: number;
+  viewNumber: number;
+}
 
 @Component({
   selector: 'app-flashcard',
@@ -16,6 +25,8 @@ export class FlashcardComponent implements OnInit {
   faceB: string = "anh thu";
   flashCards: any[];
   public id: string = "";
+  urlAPI: string = "http://osdintern2.azurewebsites.net/FlashCards";
+  
   
   constructor(private router: Router,
     private flashCardService: FlashcardService, 
@@ -31,6 +42,14 @@ export class FlashcardComponent implements OnInit {
       //  this.faceB = res.faceB;
       this.flashCards = res;
      });
+  }
+
+  onClose(flashcardId: any) {
+    this.flashCardService.interactDB(Method.DELETE, this.urlAPI, flashcardId)
+      .subscribe(res => this.flashCards = this.flashCards.filter(flashcard => {
+        return flashcard.id !== flashcardId;
+      }));
+ 
   }
 
 

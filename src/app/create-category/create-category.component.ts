@@ -44,8 +44,6 @@ export class CreateCategoryComponent implements OnInit {
     };
     this.http.post('http://osdintern2.azurewebsites.net/FlashCardCategories' , body)
     .subscribe(res => { console.log(res) },
-    err => {
-      console.log("Error occured");
-    });
+    );
   }
 }

@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
-import { MatMenuModule, MatButtonModule, MatInputModule } from '@angular/material';
+import { MatMenuModule, MatButtonModule, MatInputModule,MatCardModule } from '@angular/material';
 import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateCategoryComponent } from './create-category/create-category.component';
@@ -41,6 +41,7 @@ import {MatSelectModule} from '@angular/material';
     MatSelectModule,
     MatButtonModule,
     MatInputModule,
+    MatCardModule,
     FormsModule,
     MatButtonToggleModule,
     HttpClientModule

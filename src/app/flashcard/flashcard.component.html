@@ -1,12 +1,13 @@
-<div class="thu3" *ngFor="let fc of flashCards">
-  <div class="thu">
+<div class="contain" *ngFor="let fc of flashCards">
+  <mat-card style="width: 30%">
     {{fc.faceA}}
-  </div>
-  <div class="thu1">
-    {{fc.faceB}}
-  </div>
-  <div class="thu2">
-    <i class="material-icons" style="padding-top: 10px; padding-left: 15px;">mode_edit</i>
-    <i class="material-icons" style="padding-top: 10px; padding-left: 15px;">delete</i>
-  </div>
+  </mat-card>
+  <mat-card style="width: 55%">
+      {{fc.faceB}}
+  </mat-card>
+
+  <mat-card class="icon">
+    <i class="material-icons" style="padding-top: 5px; padding-left: 15px;">mode_edit</i>
+    <i class="material-icons" style="padding-top: 5px; padding-left: 15px;">delete</i>
+  </mat-card>
 </div>

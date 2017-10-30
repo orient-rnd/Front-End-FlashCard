@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,12 +7,25 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
-import { MatMenuModule, MatButtonModule } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FlashcardService } from './flashcard.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { PlayflashcardComponent } from './playflashcard/playflashcard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {
+  MatMenuModule,
+  MatButtonModule,
+  MatGridListModule,
+  MatCardModule,
+  MatIconModule,
+  MatProgressBarModule,
+  MatSliderModule
+} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CategoryComponent,
-    FlashcardComponent
+    FlashcardComponent,
+    PlayflashcardComponent
   ],
   imports: [
     FormsModule,
@@ -29,9 +43,22 @@ import { FormsModule } from '@angular/forms';
     HttpModule,
     MatMenuModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    MatCardModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatSliderModule
   ],
   providers: [FlashcardService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // constructor(
+  //   private matIconRegistry: MatIconRegistry,
+  //   private domSanitizer: DomSanitizer) {
+  //     matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustUrl('/src/assets/mdi.svg'));
+  // }
+}

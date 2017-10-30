@@ -9,8 +9,18 @@ import { Method } from './../method.enum';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  newFlashCard = {
+    faceA: 'test service',
+    faceB: 'result true',
+    flashCardCategoryId: 'string',
+    flashCardCategoryName: 'string',
+    userEmail: 'string',
+    displayOrder: 0,
+    viewNumber: 0
+  };
+  constructor(private flashCardService: FlashcardService) { }
 
   ngOnInit() {
   }
+
 }

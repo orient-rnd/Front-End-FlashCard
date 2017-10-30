@@ -1,0 +1,65 @@
+<div class="bounds">
+  <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="20px" fxFlexFill>
+    <div class="sec1" fxFlex="30" fxLayout.sm="row" fxLayoutAlign="center">
+      <mat-card fxFlex="60" fxLayout="column" fxLayout.sm="row">
+        <mat-card-header>
+          <mat-card-title>
+            <a href="" fxLayout="row" fxLayoutAlign="center center" fxFlexFill (click)="goBack()">
+              <i class="material-icons">keyboard_arrow_left</i>
+              <span class="blod">Back</span>
+            </a>
+          </mat-card-title>
+        </mat-card-header>
+        <hr>
+        <mat-card-content fxFlex="40" fxLayout="column" fxLayoutAlign="center">
+          <div class="title-card">
+            <div fxLayoutAlign="stretch">
+              <i class="material-icons orange600 md-36">style</i>
+              <span class="blod" fxLayoutAlign="center center">Card</span>
+            </div>
+          </div>
+          <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel"
+            [tick-interval]="tickInterval" [(ngModel)]="value" [vertical]="vertical" (click)="changeValue(value)">
+          </mat-slider>
+          <span>{{value}}/{{total}}</span>
+        </mat-card-content>
+        <mat-card-footer>
+          <div class="button-row action-row-left-part" fxLayout="column" fxLayout.sm="row" fxLayoutGap="20px">
+            <button mat-raised-button color="primary">
+              <!-- <i class="material-icons">play_arrow</i> -->
+              <i class="material-icons">pause</i> Start
+            </button>
+            <button mat-raised-button color="accent" (click)="shuffle()">
+              <i class="material-icons">shuffle</i> Mix
+            </button>
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+    <div fxFlex="70" class="content" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="30px">
+      <div class="container-flashcard">
+        <mat-card class="card-content flashcard" (click)="toggleFlip()" [class.flipped]="togglerFlip">
+          <mat-card-content class="front" fxLayoutAlign="center center" fxFlexAlign="center" fxFlexFill>
+            {{showFlashCard.faceA}}
+          </mat-card-content>
+          <mat-card-content class="back" fxLayoutAlign="center center" fxFlexAlign="center" fxFlexFill>
+            {{showFlashCard.faceB}}
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="button-row action-row" fxLayoutAlign="center" fxLayoutGap="20%">
+        <div fxFlex="50" fxLayoutAlign="end">
+          <button mat-mini-fab color="primary" (click)="previous()" [disabled]="value === 1">
+            <i class="material-icons">keyboard_arrow_left</i>
+          </button>
+        </div>
+        <div fxFlex="50" fxLayoutAlign="start">
+          <button mat-mini-fab color="warn" (click)="next()" [disabled]="value === total">
+            <i class="material-icons">keyboard_arrow_right</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [class.animation]="nextStep" -->

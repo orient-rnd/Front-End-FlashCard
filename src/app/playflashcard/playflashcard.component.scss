@@ -1,0 +1,97 @@
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bounds {
+  background-color: #ddd;
+  height: 100vh;
+}
+
+.sec1 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.sec1,
+.sec2,
+.sec3 {
+  text-align: center
+}
+
+.card-content {
+  height: 400px; // width: 700px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.container-flashcard {
+  perspective: 1000px;
+}
+
+.content {
+  padding: 0px 100px;
+}
+
+mat-card {
+  padding: 0px;
+}
+
+.action-row-left-part {
+  padding: 0px 60px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+mat-card-title {
+  margin: 0px;
+  height: 50px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.flashcard {
+  transform-style: preserve-3d;
+  transition: all .4s ease-in-out;
+  box-shadow: 0px 0px 5px #888888 !important;
+}
+
+.flipped,
+.back {
+  transform: rotateX(180deg);
+}
+
+.back,
+.front {
+  background-color: white;
+  position: absolute;
+  backface-visibility: hidden;
+  font-size: 36px;
+}
+
+.title-card {
+  padding-left: 10px;
+}
+
+.material-icons.orange600 {
+  color: #FB8C00;
+}
+
+.material-icons.md-36
+ {
+  font-size: 36px;
+}
+.blod{
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}

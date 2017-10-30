@@ -1,11 +1,12 @@
-<div>
-    <div class="leftcontainer"></div>
-    <div class="docs-component-category-list">
-            <a *ngFor="let category of categories" [routerLink]="['/flashcard',category.id]" class="docs-component-category-list-item">
-                <mat-card>
-                    <mat-card-title>{{category.name}}</mat-card-title>
-                </mat-card>
-            </a>
-        </div>
-    <div class="rightcontainer"></div>
+<div class="docs-component-category-list">
+    <div *ngFor="let category of categories">
+        <button class="sidenav-toggle" mat-button (click)="onClose()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <a [routerLink]="['/flashcard',category.id]" class="docs-component-category-list-item">
+            <mat-card>
+                <mat-card-title>{{category.name}}</mat-card-title>
+            </mat-card>
+        </a>
+    </div>
 </div>

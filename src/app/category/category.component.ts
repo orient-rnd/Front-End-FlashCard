@@ -16,4 +16,8 @@ export class CategoryComponent implements OnInit {
   ngOnInit() {
     this.flashcardService.interactDB(Method.GET,this.urlAPI,'').subscribe(res=>{this.categories=res});  
   }
+
+  onClose(){
+    alert("helllo! @Warning It's dangerous##")
+  }
 }

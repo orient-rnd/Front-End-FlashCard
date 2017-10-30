@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flashcard',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlashcardComponent implements OnInit {
 
-  constructor() { }
+  public id: string = "";
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.id = this.router.url.split('/')[2];
   }
+
+
+
+
 
 }

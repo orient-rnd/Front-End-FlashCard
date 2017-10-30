@@ -5,9 +5,10 @@ import { CategoryComponent } from './category/category.component';
 import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/category', pathMatch: 'full' },
+  { path: '', redirectTo: '/flashcard', pathMatch: 'full' },
   { path: 'category', component: CategoryComponent },
   { path: 'flashcard/:id', component: FlashcardComponent },
+  { path: 'flashcard', component: FlashcardComponent },
   { path: 'createflashcard/:id', component: CreatefalshcardComponent }
 ];
 

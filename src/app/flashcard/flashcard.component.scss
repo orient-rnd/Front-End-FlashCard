@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    height: 45px;
+}
+
+.icon{
+    background-color: rgb(245, 242, 241);
+    color: black;
+    width: 15%;
+    float: right;
+}
+.contain{
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+mat-card{
+    background-color: rgb(245, 242, 241);
+    color: black;
+    float: left;
+    padding-left: 20px;
+    padding-top: 10px;
+}

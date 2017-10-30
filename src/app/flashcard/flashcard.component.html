@@ -1,6 +1,13 @@
-<p>
-  flashcard works!
-  flashcard works!
-  flashcard works!
-  <button mat-raised-button color="primary" [routerLink]="['/createflashcard',id]">Create</button>
-</p>
+<div class="contain" *ngFor="let fc of flashCards">
+  <mat-card style="width: 30%">
+    {{fc.faceA}}
+  </mat-card>
+  <mat-card style="width: 55%">
+      {{fc.faceB}}
+  </mat-card>
+
+  <mat-card class="icon">
+    <i class="material-icons" style="padding-top: 5px; padding-left: 15px;">mode_edit</i>
+    <i class="material-icons" style="padding-top: 5px; padding-left: 15px;">delete</i>
+  </mat-card>
+</div>

@@ -24,3 +24,15 @@
         </a>
     </div>
 </div>
+<div>
+    <div class="leftcontainer"></div>
+    <div class="docs-component-category-list">
+            <a *ngFor="let category of categories" [routerLink]="['/flashcard',category.id]" class="docs-component-category-list-item">
+                <mat-card>
+                    <mat-card-title>{{category.name}}</mat-card-title>
+                </mat-card>
+            </a>
+        </div>
+    <div class="rightcontainer"></div>
+</div>
+<!-- <a href="#"  [routerLink]="['/flashcard']">Click me</a> -->

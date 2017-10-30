@@ -35,5 +35,7 @@ export class CategoryComponent implements OnInit {
       .subscribe(res => this.categories = this.categories.filter(category => {
         return category.id !== categoryId;
       }));
+ 
   }
+
 }

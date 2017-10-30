@@ -62,14 +62,10 @@ import {
     HttpClientModule,
     MatCardModule,
     BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [FlashcardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  // constructor(
-  //   private matIconRegistry: MatIconRegistry,
-  //   private domSanitizer: DomSanitizer) {
-  //     matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustUrl('/src/assets/mdi.svg'));
-  // }
 }

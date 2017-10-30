@@ -30,7 +30,7 @@ export class EditCategoryComponent implements OnInit {
     this.forgot = !this.forgot;
   }
   ngOnInit() {
-    this.http.get('http://osdintern2.azurewebsites.net/FlashCardCategories/d74aab37547d4b7baefed7320a77246a')
+    this.http.get('http://osdintern2.azurewebsites.net/FlashCardCategories/9d3b927a551342ecad0cb74a253fda15')
       .subscribe(data => {
         this.result = data as Category
         this.name = this.result.name;
@@ -38,7 +38,7 @@ export class EditCategoryComponent implements OnInit {
       });
   }
   public getCategoryDetail
-  onEdit(name: string, check: string) {
+  onEdit(name: string, check: string,categoryId: any) {
     const body = {
       "name": name,
       "userId": "string",
@@ -47,10 +47,8 @@ export class EditCategoryComponent implements OnInit {
       "isRandom": true
     };
 
-    this.http.put('http://osdintern2.azurewebsites.net/FlashCardCategories/d74aab37547d4b7baefed7320a77246a', body)
+    this.http.put('http://osdintern2.azurewebsites.net/FlashCardCategories/'+categoryId, body)
       .subscribe(res => { console.log(res) },
-      err => {
-        console.log("Error occured");
-      });
+      );
   }
 }

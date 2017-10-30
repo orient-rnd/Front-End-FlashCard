@@ -1,21 +1,32 @@
-<div layout="row" layout-align="center center" [hidden]="forgot" >
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput name="category" placeholder="Input Category Name" [value]="name" #categoryName>
-      <br/>
-    </mat-form-field>
-    <div *ngIf="face; then thenBlock else elseBlock"></div>
-    <ng-template #thenBlock>You had chosen Face A.</ng-template>
-    <ng-template #elseBlock>You had chosen Face B.</ng-template> 
-    <mat-select placeholder="Choosing faces" [(ngModel)]="selectedValue" name="face" #faceValue>
-      <mat-option *ngFor="let face of faces" [value]="face.value">
-        {{face.viewValue}}
-      </mat-option>
-    </mat-select>
-    <button  (click)="onEdit(categoryName.value,faceValue.value)"mat-raised-button color="primary">Edit Category</button>
-  </form>
-</div>
-<br/>
-<button  (click)="toggleForgot()" color="primary" mat-icon-button>
-  <mat-icon><i class="material-icons">border_color</i></mat-icon>
-</button>
+<nav>
+  <a routerLink="/">&lt; Go Back to HomePage</a>
+</nav>
+<mat-card class="example-card">
+  <mat-card-header>
+    <h2>Edit Category</h2>
+  </mat-card-header>
+  <div layout="row">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput name="category" placeholder="Input Category Name" [value]="name" #categoryName>
+      </mat-form-field>
+      <div *ngIf="face; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>You had chosen Face A.</ng-template>
+      <ng-template #elseBlock>You had chosen Face B.</ng-template>
+      <mat-form-field class="example-full-width">
+        <mat-select placeholder="Choosing faces" [(ngModel)]="selectedValue" name="face" #faceValue>
+          <mat-option *ngFor="let face of faces" [value]="face.value">
+            {{face.viewValue}}
+          </mat-option>
+        </mat-select>
+        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+      <button (click)="onEdit(categoryName.value,faceValue.value)" mat-raised-button color="primary">Edit Category</button>
+    </form>
+  </div>
+  <!-- <button color="primary" mat-icon-button>
+    <mat-icon>
+      <i class="material-icons">border_color</i>
+    </mat-icon>
+  </button> -->
+</mat-card>

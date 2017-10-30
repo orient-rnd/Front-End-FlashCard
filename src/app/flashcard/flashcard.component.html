@@ -8,6 +8,8 @@
 
   <mat-card class="icon">
     <i class="material-icons" style="padding-top: 5px; padding-left: 15px;">mode_edit</i>
-    <i class="material-icons" style="padding-top: 5px; padding-left: 15px;">delete</i>
+    <button mat-button class="sidenav-toggle"  (click)="onClose(fc.id)">
+    <i class="material-icons"><a  [routerLink]="['/flashcard',fc.id]">delete</a></i>
+  </button>
   </mat-card>
 </div>

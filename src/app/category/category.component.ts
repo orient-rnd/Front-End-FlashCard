@@ -8,10 +8,12 @@ import { Method } from './../method.enum';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
-
-  idCategory:string = "c174dcb13ee04fb8966eb640abb8e972";
-  constructor() { }
+  
+  constructor(private flashcardService:FlashcardService) { }
+  categories:any;
+  urlAPI:string="http://osdintern2.azurewebsites.net/FlashCardCategories";
 
   ngOnInit() {
+    this.flashcardService.interactDB(Method.GET,this.urlAPI,'').subscribe(res=>{this.categories=res});  
   }
 }

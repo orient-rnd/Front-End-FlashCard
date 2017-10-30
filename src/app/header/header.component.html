@@ -1,14 +1,22 @@
 <header>
-    <div class="headercontainer">
-        <div class="headerlogo">
-          <a href="" class="headerlogo">
-            Flashcard
-          </a>
-        </div>
-        <div class="rightcontainer">
-            <div class="signup">Sign Up</div>
-            <div class="login">Log In</div>
-        </div>    
+  <div class="headercontainer">
+    <div class="headerlogo">
+      <a href="" class="headerlogo">
+        Flashcard
+      </a>
     </div>
-    <div style="width: auto; height: 750px; background: #f0f0f0"></div>
+    <div class="rightcontainer">
+      <div class="signup" fxHide.xs="TRUE" fxHide.sm="TRUE">Sign Up</div>
+      <div class="login" fxHide.xs="TRUE" fxHide.sm="TRUE">Log In</div>
+      <button class="mobilemenu" mat-button [matMenuTriggerFor]="menu" fxHide.xl="TRUE" fxHide.md="TRUE" fxHide.lg="TRUE" fxShow.xs="TRUE"
+        fxShow.sm="TRUE">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>Log In</button>
+        <button mat-menu-item>Sign up</button>
+      </mat-menu>
+    </div>
+  </div>
+  <div style="width: auto; height: 750px; background: #f0f0f0"></div>
 </header>

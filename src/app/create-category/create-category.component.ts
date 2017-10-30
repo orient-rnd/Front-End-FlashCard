@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Location} from '@angular/common';
+
 @Component({
   selector: 'app-create-category',
   templateUrl: './create-category.component.html',
   styleUrls: ['./create-category.component.scss']
 })
+
 export class CreateCategoryComponent implements OnInit {
-  forgot=false
+  forgot=true;
   category="dwwdwdw";
   dulieuarr = [];
   selectedValue: string;
@@ -14,15 +17,18 @@ export class CreateCategoryComponent implements OnInit {
     {value:true, viewValue: 'Face A is choosen.'},
     {value:false, viewValue: 'Face B is choosen.'}
   ];
-  constructor(private http: HttpClient) { 
-      
+  constructor(private http: HttpClient,private _location: Location) { 
 }
   toggleForgot() {
     this.forgot = !this.forgot;
 }
+
   ngOnInit() {
   }
 
+  backClicked() {
+    this._location.back();
+}
 
   onSubmit(name: string,check:string) {
     const body = {

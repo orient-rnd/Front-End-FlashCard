@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'flashcard', component: FlashcardComponent },
   { path: 'createflashcard/:id', component: CreatefalshcardComponent },
   { 
-    path: 'creater-category',
+    path: 'create-category',
     component: CreateCategoryComponent
   },
   { 

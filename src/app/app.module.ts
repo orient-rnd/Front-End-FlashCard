@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -58,6 +59,8 @@ import {
     MatButtonModule,
     MatInputModule,
     MatCardModule,
+    MatIconModule,
+    MatGridListModule,
     FormsModule,
     MatButtonToggleModule,
     HttpClientModule,

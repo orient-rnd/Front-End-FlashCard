@@ -7,7 +7,7 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
 import {EditCategoryComponent}from'./edit-category/edit-category.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/flashcard', pathMatch: 'full' },
+  { path: '', redirectTo: '/category', pathMatch: 'full' },
   { path: 'category', component: CategoryComponent },
   { path: 'flashcard/:id', component: FlashcardComponent },
   { path: 'flashcard', component: FlashcardComponent },

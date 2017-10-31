@@ -1,9 +1,19 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
-<a (click)="toggleForgot()" routerLink="/create-category">
-    Create Category
-  </a>
+
+<mat-card>
+  <mat-card-title fxLayoutAlign="space-around">
+      <button mat-button [matMenuTriggerFor]="menu">
+          <a routerLink="/">
+            <h2><i class="material-icons">home</i> Home</h2>
+          </a>
+      </button>
+      <button mat-button>
+    <a routerLink="/create-category">
+      <h2> <i class="material-icons">add</i> Create Category</h2>
+    </a>
+  </button>
+  </mat-card-title>
+</mat-card>
 <!-- <app-flashcard></app-flashcard> -->
 <router-outlet></router-outlet>
-
 <app-footer></app-footer>

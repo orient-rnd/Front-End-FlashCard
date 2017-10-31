@@ -22,24 +22,31 @@ export class Category {
 export class CategoryComponent implements OnInit {
 
 
-  constructor(private flashcardService: FlashcardService,private http: HttpClient) { }
+  constructor(private flashcardService: FlashcardService, private http: HttpClient) { }
   categories: Category[];
   urlAPI: string = "http://osdintern2.azurewebsites.net/FlashCardCategories";
 
 
   ngOnInit() {
-    this.flashcardService.interactDB(Method.GET, this.urlAPI, '').subscribe(res => { this.categories = res });
+    this.flashcardService.interactDB(Method.GET, this.urlAPI, '').subscribe(res => { 
+      this.categories = res
+    });
   }
-  
+
   onClose(categoryId: any) {
     this.flashcardService.interactDB(Method.DELETE, this.urlAPI, categoryId)
-      .subscribe(res => this.categories = this.categories.filter(category => {
-        return category.id !== categoryId;
-      }));
- 
+      .subscribe(res =>{
+        this.categories = this.categories.filter(category => {
+          return category.id !== categoryId;
+        })
+      }
+      );
   }
-  public getCategoryDetail
-  onEdit(name: string, check: string,categoryId: any) {
+  getDimensionsByFilter(categoryId: any){
+    return this.categories.filter(x => x.id === categoryId);
+  }
+  
+  onEdit(name: string, check: string, categoryId: any) {
     const body = {
       "name": name,
       "userId": "string",
@@ -48,9 +55,9 @@ export class CategoryComponent implements OnInit {
       "isRandom": true
     };
 
-    this.http.put('http://osdintern2.azurewebsites.net/FlashCardCategories/'+categoryId, body)
+    this.http.put('http://osdintern2.azurewebsites.net/FlashCardCategories/' + categoryId, body)
       .subscribe(res => { console.log(res) },
-      );
+    );
   }
 
 }

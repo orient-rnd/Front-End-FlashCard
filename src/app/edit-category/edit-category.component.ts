@@ -30,14 +30,13 @@ export class EditCategoryComponent implements OnInit {
     this.forgot = !this.forgot;
   }
   ngOnInit() {
-    this.http.get('http://osdintern2.azurewebsites.net/FlashCardCategories/9d3b927a551342ecad0cb74a253fda15')
+    this.http.get('http://osdintern2.azurewebsites.net/FlashCardCategories')
       .subscribe(data => {
         this.result = data as Category
         this.name = this.result.name;
         this.face=this.result.isFaceAShowFirst;
       });
   }
-  public getCategoryDetail
   onEdit(name: string, check: string,categoryId: any) {
     const body = {
       "name": name,

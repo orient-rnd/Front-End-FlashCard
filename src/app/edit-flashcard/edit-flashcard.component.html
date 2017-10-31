@@ -1,0 +1,10 @@
+<div fxLayout.xs="column" fxLayoutAlign.xs="start start" fxLayout.sm="column" fxLayoutAlign.sm="space-around center" fxLayout.md="row" fxLayout.lg="row" fxLayout.xl="row" fxLayoutAlign="space-around start">
+      <mat-form-field class="example-full-width" fxFlex.xs="90" fxFlex.sm="90" fxFlex.xl="30">
+        <input matInput name="facea" [(ngModel)]="data.faceA" placeholder="Face A">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlex.xs="90" fxFlex.sm="90" fxFlex.xl="30">
+        <input matInput name="faceb" [(ngModel)]="data.faceB" placeholder="Face B">
+      </mat-form-field>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center"><button mat-raised-button color="primary" (click)="onClick()">Edit Flashcard</button></div>
+<div style="width: auto; height: 750px; background: #f0f0f0"></div>

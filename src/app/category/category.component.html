@@ -1,3 +1,29 @@
+<div class="docs-component-category-list">
+    <div *ngFor="let category of categories">
+        <mat-grid-list cols="30" rowHeight="55px">
+            <mat-grid-tile [colspan]="10" [rowspan]="1" [style.background]="lightblue">
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="9" [rowspan]="1" [style.background]="lightblue">
+                <button mat-button class="sidenav-toggle" style="background:Blue;" (click)="onEdit()">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="9" [rowspan]="1" [style.background]="lightblue">
+                <button mat-button class="sidenav-toggle" style="background:red;"  (click)="onClose(category.id)">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+
+        <a [routerLink]="['/flashcard',category.id]" class="docs-component-category-list-item">
+            <mat-card>
+                <mat-card-title>{{category.name}}</mat-card-title>
+            </mat-card>
+        </a>
+    </div>
+</div>
 <div>
     <div class="leftcontainer"></div>
     <div class="docs-component-category-list">
@@ -9,3 +35,4 @@
         </div>
     <div class="rightcontainer"></div>
 </div>
+<!-- <a href="#"  [routerLink]="['/flashcard']">Click me</a> -->

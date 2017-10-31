@@ -1,9 +1,10 @@
 <div class="docs-component-category-list">
-    <div *ngFor="let category of categories">
+    <div *ngFor="let category of categories" class="panel">
         <mat-grid-list cols="30" rowHeight="55px">
             <mat-grid-tile [colspan]="10" [rowspan]="1" [style.background]="lightblue">
             </mat-grid-tile>
             <mat-grid-tile [colspan]="9" [rowspan]="1" [style.background]="lightblue">
+
                 <button mat-button class="sidenav-toggle" style="background:grey;">
                     <i class="material-icons">
                         <a [routerLink]="['/edit-category',category.id]">edit</a>
@@ -13,9 +14,15 @@
             <mat-grid-tile [colspan]="9" [rowspan]="1" [style.background]="lightblue">
                 <button mat-button class="sidenav-toggle" style="background:red;" (click)="onClose(category.id)">
                     <mat-icon>delete</mat-icon>
+                <button mat-button class="sidenav-toggle disappear" style="background:Blue;" (click)="onEdit()">
+                    <mat-icon>edit</mat-icon>
                 </button>
             </mat-grid-tile>
-
+            <mat-grid-tile [colspan]="9" [rowspan]="1" [style.background]="lightblue">
+                <button mat-button class="sidenav-toggle disappear" style="background:red;" (click)="onClose(category.id)">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-grid-tile>
         </mat-grid-list>
         <a [routerLink]="['/flashcard',category.id]" class="docs-component-category-list-item">
             <mat-card>

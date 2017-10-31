@@ -57,3 +57,13 @@ $desktop:1366px;
     color:rgb(248, 246, 246)
   }
 
+  .panel{
+    .disappear{
+      display:none;
+    }
+    &:hover{
+      .disappear{
+        display:block;
+      }
+    }
+  }

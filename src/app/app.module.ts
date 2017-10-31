@@ -15,8 +15,9 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlashcardService } from './flashcard.service';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
-import { MatButtonToggleModule } from '@angular/material';
-import { MatSelectModule } from '@angular/material';
+import {MatButtonToggleModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material';
+import { EditFlashcardComponent } from './edit-flashcard/edit-flashcard.component';
 import { HttpModule } from '@angular/http';
 import { PlayflashcardComponent } from './playflashcard/playflashcard.component';
 
@@ -31,8 +32,6 @@ import {
   MatInputModule
 } from '@angular/material';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +42,7 @@ import {
     FlashcardComponent,
     EditCategoryComponent,
     CreatefalshcardComponent,
+    EditFlashcardComponent,
     PlayflashcardComponent
   ],
   imports: [

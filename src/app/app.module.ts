@@ -18,6 +18,7 @@ import { HttpModule } from '@angular/http';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import {MatButtonToggleModule} from '@angular/material';
 import {MatSelectModule} from '@angular/material';
+import { EditFlashcardComponent } from './edit-flashcard/edit-flashcard.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MatSelectModule} from '@angular/material';
     CategoryComponent,
     FlashcardComponent,
     EditCategoryComponent,
-    CreatefalshcardComponent
+    CreatefalshcardComponent,
+    EditFlashcardComponent
   ],
   imports: [
     FormsModule,

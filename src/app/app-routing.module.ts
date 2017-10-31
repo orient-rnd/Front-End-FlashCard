@@ -6,7 +6,7 @@ import { CreatefalshcardComponent } from './createfalshcard/createfalshcard.comp
 import { EditFlashcardComponent } from './edit-flashcard/edit-flashcard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/flashcard', pathMatch: 'full' },
+  { path: '', redirectTo: '/category', pathMatch: 'full' },
   { path: 'category', component: CategoryComponent },
   { path: 'flashcard/:id', component: FlashcardComponent },
   { path: 'flashcard', component: FlashcardComponent },
